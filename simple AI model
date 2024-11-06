@@ -1,0 +1,28 @@
+import random
+
+
+responses = {
+    'a': 'You entered the letter A.',
+    'b': 'You entered the letter B.',
+    'c': 'You entered the letter C.',
+    'y': 'You entered the letter y.',
+
+
+}
+
+def get_response(user_input):
+
+    return responses.get(user_input.lower(), "I don't understand that letter.")
+
+def main():
+    print("Welcome to the letter understanding AI model!")
+    while True:
+        user_input = input("Please enter a letter (or type 'exit' to quit): ")
+        if user_input.lower() == 'exit':
+            print("Goodbye!")
+            break
+        response = get_response(user_input)
+        print(response)
+
+if __name__ == "__main__":
+    main()
